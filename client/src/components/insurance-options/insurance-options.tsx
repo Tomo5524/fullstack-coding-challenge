@@ -1,0 +1,55 @@
+import React from "react";
+import CTAButton from "../commons/cta-button/cta-button";
+import ErrorMessageDisplay from "../commons/error-message/error-message";
+import NavButton from "../commons/nav-button/nav-button";
+import { ButtonContainer } from "../commons/nav-button/style";
+import { Container } from "../product-options/style";
+import { insuranceList } from "./data";
+
+interface InsuranceOptionsProps {
+  setSelectedOption: (insurance: string) => void;
+  handleNextStage: () => void;
+  handlePreviousStage: () => void;
+  selectedOption: string;
+  errorMessageDB: string;
+}
+
+function InsuranceOptions({
+  setSelectedOption,
+  handleNextStage,
+  handlePreviousStage,
+  selectedOption,
+  errorMessageDB,
+}: InsuranceOptionsProps) {
+  const handleOnChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    setSelectedOption(e.target.value);
+  };
+  const handleGoToNext = () => {
+    if (selectedOption !== "") {
+      handleNextStage();
+    } else {
+      // display error message
+    }
+  };
+  return (
+    <Container>
+      <select name="insuranceOption" onChange={(e) => handleOnChange(e)}>
+        {insuranceList.map((item, index) => {
+          return (
+            <option key={`${item}-${index}`} value={item.insuranceOption}>
+              {item.insuranceOption}
+            </option>
+          );
+        })}
+      </select>
+      <ButtonContainer>
+        <NavButton handleClick={handlePreviousStage} variant="left" />
+        <CTAButton text="submit" />
+        {/* <NavButton handleClick={handleGoToNext} variant="right" /> */}
+      </ButtonContainer>
+      <ErrorMessageDisplay text={errorMessageDB} />
+    </Container>
+  );
+}
+
+export default InsuranceOptions;
