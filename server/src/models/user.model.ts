@@ -3,6 +3,7 @@ const Schema = mongoose.Schema;
 
 export interface UserInput {
   product: string;
+  option: string;
   user: {
     firstName: string;
     lastName: string;
@@ -16,7 +17,6 @@ export interface UserInput {
     address: string;
     emailAddress: string;
   };
-  option: string;
 }
 
 export interface UserDocument extends UserInput, mongoose.Document {
@@ -27,6 +27,7 @@ export interface UserDocument extends UserInput, mongoose.Document {
 const UserSchema = new Schema(
   {
     product: { type: String, required: true },
+    option: { type: String, required: true },
     user: {
       firstName: {
         type: String,
@@ -73,7 +74,6 @@ const UserSchema = new Schema(
         required: true,
       },
     },
-    option: { type: String, required: true },
   },
   {
     timestamps: true,
