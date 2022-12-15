@@ -36,7 +36,20 @@ function Home() {
     e.preventDefault();
     // all the other important data is all checked at this point except for selected option. if data was modified on front end (for example, using react dev tool to change component state), we still check it on backend so we will still be able to catch such errors.
     if (selectedOption !== "") {
-      const outputData = { selectedProduct, userInfo, selectedOption };
+      // const outputData = { selectedProduct, userInfo, selectedOption };
+      // try {
+      //   const data = await fetch(
+      //     `${process.env.REACT_APP_ENDPOINT}/api/users`,
+      //     {
+      //       mode: "cors",
+      //       method: "POST",
+      //       headers: {
+      //         "Content-Type": "application/json",
+      //       },
+      //       body: JSON.stringify({ outputData }),
+      //     }
+      //   );
+
       try {
         const data = await fetch(
           `${process.env.REACT_APP_ENDPOINT}/api/users`,
@@ -46,22 +59,37 @@ function Home() {
             headers: {
               "Content-Type": "application/json",
             },
-            body: JSON.stringify({ outputData }),
+            body: JSON.stringify({
+              product: selectedProduct,
+              option: selectedOption,
+              user: userInfo,
+            }),
           }
         );
         const res = await data.json();
+        console.log("🚀 ~ file: home.tsx:56 ~ handleSubmit ~ res", res);
         if (res) {
           setCurrentStage(3);
+        }
+        // backend's validation catches errors
+        else if (res.code === "invalid_type" || res.message === "Required") {
+          console.log("data was sent to backend but error occurred");
+          setErrorMessage(
+            "お客様の個人情報に誤りが確認されました。もう一度情報のご確認をお願いします"
+          );
         } else {
           console.log("data was sent to backend but error occurred");
           setErrorMessage("お客様の個人情報が正確に保存されませんでした。");
         }
       } catch (e) {
+        // backend is not running.
         setErrorMessage(
           "サーバの不具合が生じてるため後ほどお手数ですが改めてお願いします。"
         );
       }
-    } else {
+    }
+    // no option is selected
+    else {
       setErrorMessage("オプションを選択してください。");
     }
   };
