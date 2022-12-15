@@ -1,5 +1,4 @@
 import styled from "styled-components";
-// import { media } from "../../theme/breakpoints";
 
 export const Container = styled.section`
   height: 100%;

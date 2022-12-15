@@ -24,13 +24,7 @@ function InsuranceOptions({
   const handleOnChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     setSelectedOption(e.target.value);
   };
-  const handleGoToNext = () => {
-    if (selectedOption !== "") {
-      handleNextStage();
-    } else {
-      // display error message
-    }
-  };
+
   return (
     <Container>
       <select name="insuranceOption" onChange={(e) => handleOnChange(e)}>
@@ -45,7 +39,6 @@ function InsuranceOptions({
       <ButtonContainer>
         <NavButton handleClick={handlePreviousStage} variant="left" />
         <CTAButton text="submit" />
-        {/* <NavButton handleClick={handleGoToNext} variant="right" /> */}
       </ButtonContainer>
       <ErrorMessageDisplay text={errorMessageDB} />
     </Container>

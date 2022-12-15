@@ -32,8 +32,6 @@ function Home() {
     setCurrentStage(currentStage - 1);
   }, [currentStage]);
 
-  // make api Call here
-  // const handleSubmit = () => {}
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     // all the other important data is all checked at this point except for selected option. if data was modified on front end (for example, using react dev tool to change component state), we still check it on backend so we will still be able to catch such errors.
@@ -71,7 +69,6 @@ function Home() {
   return (
     <>
       <form onSubmit={handleSubmit}>
-        {/* use form here? */}
         {currentStage === 0 && (
           <ProductOptions
             selectedProduct={selectedProduct}

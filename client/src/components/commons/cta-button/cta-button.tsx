@@ -1,9 +1,5 @@
 import React, { ButtonHTMLAttributes } from "react";
 import { CTAButtonStyle } from "./style";
-// import { AutoIcon, HomeIcon, LifeIcon, MotorCycleIcon } from "../button-icons";
-
-// import { getLinkClassNames } from "./classNameHelper";
-// import { PlayVideo } from "./playVideoButton";
 
 type CTAButtonTextVariant = "submit" | "会計";
 

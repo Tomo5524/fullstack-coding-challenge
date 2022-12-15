@@ -1,8 +1,5 @@
-import React, { ButtonHTMLAttributes } from "react";
-// import { AutoIcon, HomeIcon, LifeIcon, MotorCycleIcon } from "../button-icons";
+import { ButtonHTMLAttributes } from "react";
 import { Button } from "./style";
-// import { getLinkClassNames } from "./classNameHelper";
-// import { PlayVideo } from "./playVideoButton";
 
 type ButtonTextType = "left" | "right";
 

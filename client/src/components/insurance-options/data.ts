@@ -7,13 +7,3 @@ export const insuranceList = [
   { insuranceOption: "1 week", price: 200000 },
   { insuranceOption: "Premium", price: 500000 },
 ];
-
-// export const insuranceList = [
-//   "",
-//   "Short Term",
-//   "Short Term",
-//   "3 day",
-//   "5 day",
-//   "1 week",
-//   "Premium",
-// ];

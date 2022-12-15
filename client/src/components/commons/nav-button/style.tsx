@@ -1,5 +1,4 @@
 import styled from "styled-components";
-// import { media } from "../../theme/breakpoints";
 
 export const Button = styled.button`
   background-color: transparent;
