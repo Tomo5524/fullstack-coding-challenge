@@ -97,9 +97,7 @@ function UserInputForm({
   };
 
   const handleAge = (e: React.ChangeEvent<HTMLInputElement>) => {
-    // console.log(e.target.value.length);
     if (numericInputCheck(e.target.value)) {
-      console.log(errorMessage[e.target.name as keyof UserInputFormType]);
       if (errorMessage[e.target.value as keyof UserInputFormType] !== "") {
         handleSetErrorMessage(e.target.name, "");
       }
@@ -169,7 +167,6 @@ function UserInputForm({
 
   const handleGoToNext = () => {
     // check required filed
-    console.log(userInfo);
     if (checkRequiredField()) {
       handleNextStage();
     }
