@@ -1,5 +1,4 @@
 import styled from "styled-components";
-// import { media } from "../../theme/breakpoints";
 
 interface CardContainerProps {
   readonly isActive: boolean;
