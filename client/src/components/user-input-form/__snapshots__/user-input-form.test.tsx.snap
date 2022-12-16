@@ -1,0 +1,413 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`it takes a snapshot 1`] = `
+<div
+  className="sc-hLBbgP hYBJkT"
+>
+  <h1
+    className="sc-pyfCe"
+  >
+    Please Enter User Information
+  </h1>
+  <label>
+    <div
+      className="sc-eDvSVe dBsNRM"
+    >
+      <div
+        className="sc-gKPRtg coSRLr"
+      >
+        <p
+          className="sc-ftTHYK irylpZ"
+        >
+          First Name
+        </p>
+        <p
+          className="sc-bcXHqe ghHMQa"
+          data-testid="error-message"
+        />
+      </div>
+      <div
+        className="sc-iBYQkv lfYpaE"
+        data-testid="user-information-input"
+      >
+        <input
+          data-testid="user-information-input-test-firstName"
+          name="firstName"
+          onChange={[Function]}
+          placeholder="First Name"
+          type="text"
+          value=""
+        />
+      </div>
+    </div>
+  </label>
+  <label>
+    <div
+      className="sc-eDvSVe dBsNRM"
+    >
+      <div
+        className="sc-gKPRtg coSRLr"
+      >
+        <p
+          className="sc-ftTHYK irylpZ"
+        >
+          Last Name
+        </p>
+        <p
+          className="sc-bcXHqe ghHMQa"
+          data-testid="error-message"
+        />
+      </div>
+      <div
+        className="sc-iBYQkv lfYpaE"
+      >
+        <input
+          name="lastName"
+          onChange={[Function]}
+          placeholder="Last Name"
+          type="text"
+          value=""
+        />
+      </div>
+    </div>
+  </label>
+  <label>
+    <div
+      className="sc-eDvSVe dBsNRM"
+    >
+      <div
+        className="sc-gKPRtg coSRLr"
+      >
+        <p
+          className="sc-ftTHYK irylpZ"
+        >
+          First Name (カタカナ)
+        </p>
+        <p
+          className="sc-bcXHqe ghHMQa"
+          data-testid="error-message"
+        />
+      </div>
+      <div
+        className="sc-iBYQkv lfYpaE"
+      >
+        <input
+          name="fnameKana"
+          onChange={[Function]}
+          placeholder="First Name (カタカナ)"
+          type="text"
+          value=""
+        />
+      </div>
+    </div>
+  </label>
+  <label>
+    <div
+      className="sc-eDvSVe dBsNRM"
+    >
+      <div
+        className="sc-gKPRtg coSRLr"
+      >
+        <p
+          className="sc-ftTHYK irylpZ"
+        >
+          Last Name (カタカナ)
+        </p>
+        <p
+          className="sc-bcXHqe ghHMQa"
+          data-testid="error-message"
+        />
+      </div>
+      <div
+        className="sc-iBYQkv lfYpaE"
+      >
+        <input
+          name="lnameKana"
+          onChange={[Function]}
+          placeholder="Last Name (カタカナ)"
+          type="text"
+          value=""
+        />
+      </div>
+    </div>
+  </label>
+  <label>
+    <div
+      className="sc-eDvSVe dBsNRM"
+    >
+      <div
+        className="sc-gKPRtg coSRLr"
+      >
+        <p
+          className="sc-ftTHYK irylpZ"
+        >
+          Gender
+        </p>
+        <p
+          className="sc-bcXHqe ghHMQa"
+          data-testid="error-message"
+        />
+      </div>
+      <div
+        className="sc-iBYQkv lfYpaE"
+      >
+        <select
+          name="gender"
+          onChange={[Function]}
+          value=""
+        >
+          <option
+            value=""
+          />
+          <option
+            value="Male"
+          >
+            Male
+          </option>
+          <option
+            value="Female"
+          >
+            Female
+          </option>
+        </select>
+      </div>
+    </div>
+  </label>
+  <label>
+    <div
+      className="sc-eDvSVe dBsNRM"
+    >
+      <div
+        className="sc-gKPRtg coSRLr"
+      >
+        <p
+          className="sc-ftTHYK irylpZ"
+        >
+          Age
+        </p>
+        <p
+          className="sc-bcXHqe ghHMQa"
+          data-testid="error-message"
+        />
+      </div>
+      <div
+        className="sc-iBYQkv lfYpaE"
+      >
+        <input
+          name="age"
+          onChange={[Function]}
+          type="text"
+          value=""
+        />
+      </div>
+    </div>
+  </label>
+  <label>
+    <div
+      className="sc-eDvSVe dBsNRM"
+    >
+      <div
+        className="sc-gKPRtg coSRLr"
+      >
+        <p
+          className="sc-ftTHYK irylpZ"
+        >
+          Vehicle Type
+        </p>
+        <p
+          className="sc-bcXHqe ghHMQa"
+          data-testid="error-message"
+        />
+      </div>
+      <div
+        className="sc-iBYQkv lfYpaE"
+      >
+        <select
+          name="vehicleType"
+          onChange={[Function]}
+          value=""
+        >
+          <option
+            value=""
+          />
+          <option
+            value="Car"
+          >
+            Car
+          </option>
+          <option
+            value="Motor cycle"
+          >
+            Motor cycle
+          </option>
+          <option
+            value="Bike"
+          >
+            Bike
+          </option>
+          <option
+            value="Boat"
+          >
+            Boat
+          </option>
+          <option
+            value="Air Plane"
+          >
+            Air Plane
+          </option>
+        </select>
+      </div>
+    </div>
+  </label>
+  <label>
+    <div
+      className="sc-eDvSVe dBsNRM"
+    >
+      <div
+        className="sc-gKPRtg coSRLr"
+      >
+        <p
+          className="sc-ftTHYK irylpZ"
+        >
+          Post Code
+        </p>
+        <p
+          className="sc-bcXHqe ghHMQa"
+          data-testid="error-message"
+        />
+      </div>
+      <div
+        className="sc-iBYQkv lfYpaE"
+      >
+        <input
+          name="postCode"
+          onChange={[Function]}
+          type="text"
+          value=""
+        />
+      </div>
+    </div>
+  </label>
+  <label>
+    <div
+      className="sc-eDvSVe dBsNRM"
+    >
+      <div
+        className="sc-gKPRtg coSRLr"
+      >
+        <p
+          className="sc-ftTHYK irylpZ"
+        >
+          City
+        </p>
+        <p
+          className="sc-bcXHqe ghHMQa"
+          data-testid="error-message"
+        />
+      </div>
+      <div
+        className="sc-iBYQkv lfYpaE"
+      >
+        <input
+          name="city"
+          onChange={[Function]}
+          type="text"
+          value=""
+        />
+      </div>
+    </div>
+  </label>
+  <label>
+    <div
+      className="sc-eDvSVe dBsNRM"
+    >
+      <div
+        className="sc-gKPRtg coSRLr"
+      >
+        <p
+          className="sc-ftTHYK irylpZ"
+        >
+          Home Address
+        </p>
+        <p
+          className="sc-bcXHqe ghHMQa"
+          data-testid="error-message"
+        />
+      </div>
+      <div
+        className="sc-iBYQkv lfYpaE"
+      >
+        <input
+          name="address"
+          onChange={[Function]}
+          type="text"
+          value=""
+        />
+      </div>
+    </div>
+  </label>
+  <label>
+    <div
+      className="sc-eDvSVe dBsNRM"
+    >
+      <div
+        className="sc-gKPRtg coSRLr"
+      >
+        <p
+          className="sc-ftTHYK irylpZ"
+        >
+          Email
+        </p>
+        <p
+          className="sc-bcXHqe ghHMQa"
+          data-testid="error-message"
+        />
+      </div>
+      <div
+        className="sc-iBYQkv lfYpaE"
+      >
+        <input
+          name="emailAddress"
+          onChange={[Function]}
+          type="email"
+          value=""
+        />
+      </div>
+    </div>
+  </label>
+  <div
+    className="sc-dkrFOg kJEZRB"
+  >
+    <button
+      className="sc-gswNZR etYjDK"
+      data-testid="nav-button-left"
+      onClick={[MockFunction]}
+      type="button"
+    >
+      <svg
+        viewBox="0 0 448 512"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288H416c17.7 0 32-14.3 32-32s-14.3-32-32-32H109.3l105.3-105.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"
+        />
+      </svg>
+    </button>
+    <button
+      className="sc-gswNZR etYjDK"
+      data-testid="nav-button-right"
+      onClick={[Function]}
+      type="button"
+    >
+      <svg
+        viewBox="0 0 448 512"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224H32c-17.7 0-32 14.3-32 32s14.3 32 32 32h306.7L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"
+        />
+      </svg>
+    </button>
+  </div>
+</div>
+`;
