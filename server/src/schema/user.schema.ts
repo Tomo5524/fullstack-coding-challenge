@@ -25,7 +25,7 @@ export const createUserSchema = object({
         required_error: "gender is required",
       }),
       age: string({
-        required_error: "gender is required",
+        required_error: "age is required",
       })
         .min(1, "Age too small - should be 2 chars minimum")
         .max(2, "Age too big - cannot be more than 2 chars"),
@@ -33,13 +33,13 @@ export const createUserSchema = object({
         required_error: "vehicleType is required",
       }),
       postCode: string({
-        required_error: "gender is required",
-      }).max(7, "Age too big - cannot be more than 7 chars"),
+        required_error: "postCode is required",
+      }).max(7, "postCode too long - cannot be more than 7 chars"),
       city: string({
         required_error: "city is required",
       }),
       address: string({
-        required_error: "city is required",
+        required_error: "address is required",
       }),
       emailAddress: string({
         required_error: "Email is required",
