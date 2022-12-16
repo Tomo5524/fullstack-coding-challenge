@@ -9,7 +9,11 @@ interface CTAButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 function CTAButton({ text, onClick }: CTAButtonProps) {
-  return <CTAButtonStyle onClick={onClick}>{text}</CTAButtonStyle>;
+  return (
+    <CTAButtonStyle onClick={onClick} data-testid={`CTA-button-${text}`}>
+      {text}
+    </CTAButtonStyle>
+  );
 }
 
 export default CTAButton;

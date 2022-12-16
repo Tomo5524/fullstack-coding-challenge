@@ -181,13 +181,14 @@ function UserInputForm({
             <LabelText>First Name</LabelText>
             <ErrorMessageDisplay text={errorMessage.firstName} />
           </LabelTextBox>
-          <InputBox>
+          <InputBox data-testid="user-information-input">
             <input
               name="firstName"
               type="text"
               placeholder="First Name"
               onChange={handleUserInfo}
               value={userInfo.firstName}
+              data-testid="user-information-input-test-firstName"
             />
           </InputBox>
         </FieldContainer>
@@ -205,6 +206,7 @@ function UserInputForm({
               placeholder="Last Name"
               onChange={handleUserInfo}
               value={userInfo.lastName}
+              data-testid="user-information-input-test-lastName"
             />
           </InputBox>
         </FieldContainer>
@@ -222,6 +224,7 @@ function UserInputForm({
               placeholder="First Name (カタカナ)"
               onChange={handleHankaku}
               value={userInfo.fnameKana}
+              data-testid="user-information-input-test-fnameKana"
             />
           </InputBox>
         </FieldContainer>
@@ -239,6 +242,7 @@ function UserInputForm({
               placeholder="Last Name (カタカナ)"
               onChange={handleHankaku}
               value={userInfo.lnameKana}
+              data-testid="user-information-input-test-lnameKana"
             />
           </InputBox>
         </FieldContainer>
@@ -254,6 +258,7 @@ function UserInputForm({
               name="gender"
               onChange={(e) => handleUserInfo(e)}
               value={userInfo.gender}
+              data-testid="user-information-input-test-gender"
             >
               {gender.map((item, index) => {
                 return (
@@ -278,6 +283,7 @@ function UserInputForm({
               name="age"
               value={userInfo.age}
               onChange={handleAge}
+              data-testid="user-information-input-test-age"
             />
           </InputBox>
         </FieldContainer>
@@ -293,6 +299,7 @@ function UserInputForm({
               name="vehicleType"
               onChange={(e) => handleUserInfo(e)}
               value={userInfo.vehicleType}
+              data-testid="user-information-input-test-vehicleType"
             >
               {vehicles.map((vehicle, index) => {
                 return (
@@ -317,6 +324,7 @@ function UserInputForm({
               type="text"
               value={userInfo.postCode}
               onChange={handlePostCode}
+              data-testid="user-information-input-test-postCode"
             />
           </InputBox>
         </FieldContainer>
@@ -333,6 +341,7 @@ function UserInputForm({
               type="text"
               onChange={handleUserInfo}
               value={userInfo.city}
+              data-testid="user-information-input-test-city"
             />
           </InputBox>
         </FieldContainer>
@@ -349,6 +358,7 @@ function UserInputForm({
               type="text"
               onChange={handleUserInfo}
               value={userInfo.address}
+              data-testid="user-information-input-test-address"
             />
           </InputBox>
         </FieldContainer>
@@ -365,6 +375,7 @@ function UserInputForm({
               type="email"
               value={userInfo.emailAddress}
               onChange={handleUserInfo}
+              data-testid="user-information-input-test-emailAddress"
             />
           </InputBox>
         </FieldContainer>

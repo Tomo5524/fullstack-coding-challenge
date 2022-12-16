@@ -29,7 +29,11 @@ const getButtonLogoArrow = (variant: string) => {
 
 function NavButton({ variant, handleClick }: NavButtonProps) {
   return (
-    <Button onClick={handleClick} type="button">
+    <Button
+      onClick={handleClick}
+      type="button"
+      data-testid={`nav-button-${variant}`}
+    >
       {getButtonLogoArrow(variant)}
     </Button>
   );

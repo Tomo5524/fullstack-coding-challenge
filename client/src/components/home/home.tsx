@@ -68,8 +68,8 @@ function Home() {
         );
         const res = await data.json();
         console.log("🚀 ~ file: home.tsx:56 ~ handleSubmit ~ res", res);
-        if (res) {
-          setCurrentStage(3);
+        if (res.message) {
+          setErrorMessage(res.message);
         }
         // backend's validation catches errors
         else if (res.code === "invalid_type" || res.message === "Required") {
@@ -78,11 +78,10 @@ function Home() {
             "お客様の個人情報に誤りが確認されました。もう一度情報のご確認をお願いします"
           );
         } else {
-          console.log("data was sent to backend but error occurred");
-          setErrorMessage("お客様の個人情報が正確に保存されませんでした。");
+          setCurrentStage(3);
         }
-      } catch (e) {
-        // backend is not running.
+      } catch (error: any) {
+        console.log(error.data.message);
         setErrorMessage(
           "サーバの不具合が生じてるため後ほどお手数ですが改めてお願いします。"
         );
@@ -114,9 +113,7 @@ function Home() {
         )}
         {currentStage === 2 && (
           <InsuranceOptions
-            selectedOption={selectedOption}
             setSelectedOption={setSelectedOption}
-            handleNextStage={handleNextStage}
             handlePreviousStage={handlePreviousStage}
             errorMessageDB={errorMessage}
           />

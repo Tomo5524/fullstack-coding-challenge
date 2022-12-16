@@ -8,17 +8,13 @@ import { insuranceList } from "./data";
 
 interface InsuranceOptionsProps {
   setSelectedOption: (insurance: string) => void;
-  handleNextStage: () => void;
   handlePreviousStage: () => void;
-  selectedOption: string;
   errorMessageDB: string;
 }
 
 function InsuranceOptions({
   setSelectedOption,
-  handleNextStage,
   handlePreviousStage,
-  selectedOption,
   errorMessageDB,
 }: InsuranceOptionsProps) {
   const handleOnChange = (e: React.ChangeEvent<HTMLSelectElement>) => {

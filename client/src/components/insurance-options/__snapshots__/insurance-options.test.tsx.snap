@@ -1,0 +1,76 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`it takes a snapshot 1`] = `
+<section
+  className="sc-eDvSVe jnJatA"
+>
+  <select
+    name="insuranceOption"
+    onChange={[Function]}
+  >
+    <option
+      value=""
+    />
+    <option
+      value="Short Term"
+    >
+      Short Term
+    </option>
+    <option
+      value="Long Term"
+    >
+      Long Term
+    </option>
+    <option
+      value="3 day"
+    >
+      3 day
+    </option>
+    <option
+      value="5 day"
+    >
+      5 day
+    </option>
+    <option
+      value="1 week"
+    >
+      1 week
+    </option>
+    <option
+      value="Premium"
+    >
+      Premium
+    </option>
+  </select>
+  <div
+    className="sc-hLBbgP gJsMjZ"
+  >
+    <button
+      className="sc-dkrFOg fXnWRs"
+      data-testid="nav-button-left"
+      onClick={[MockFunction]}
+      type="button"
+    >
+      <svg
+        viewBox="0 0 448 512"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288H416c17.7 0 32-14.3 32-32s-14.3-32-32-32H109.3l105.3-105.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"
+        />
+      </svg>
+    </button>
+    <button
+      className="sc-bcXHqe kaUdOV"
+    >
+      submit
+    </button>
+  </div>
+  <p
+    className="sc-gswNZR hiXnOC"
+    data-testid="error-message"
+  >
+    test
+  </p>
+</section>
+`;

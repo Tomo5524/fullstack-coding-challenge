@@ -27,7 +27,7 @@ function ProductOptions({
   );
 
   const productLists = useMemo(() => {
-    return productOptions.map((product) => {
+    return productOptions.map((product, idx) => {
       return (
         <li key={`${product.id}-${product}`}>
           <Card
@@ -36,6 +36,7 @@ function ProductOptions({
             handleClick={handleClick}
             productId={product.id}
             isActive={product.text === selectedProduct}
+            idx={idx}
           />
         </li>
       );
