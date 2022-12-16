@@ -3,12 +3,17 @@ import { collections } from "./database.service";
 
 export async function CreateUser(input: UserInput) {
   try {
-    // const user = await UserModel.create(input);
-    const user = await collections!.users!.insertOne(input);
-
-    // to remove all records Of a collection
-    // await collections!.users!.deleteMany({});
-    return user;
+    const { emailAddress } = input.user;
+    const existingUser = await collections!.users!.findOne({
+      "user.emailAddress": emailAddress,
+    });
+    if (!existingUser) {
+      // const user = await userModel.create(input);
+      const user = await collections!.users!.insertOne(input);
+      return user;
+    } else {
+      throw new Error("email already in use");
+    }
   } catch (e: any) {
     throw new Error(e);
   }

@@ -16,13 +16,15 @@ export async function createUserHandler(
   try {
     const result = await CreateUser(userInfoData);
     result
-      ? res.status(201).json({
+      ? res.status(201).send({
           result,
           msg: `Successfully created a new game with id ${result.insertedId}`,
         })
-      : res.status(500).send("Failed to create a new game.");
+      : res.status(500).send("Failed to create a new user.");
   } catch (error: any) {
-    console.error(error);
-    return res.status(400).send(error.message);
+    console.log("🚀 ~ file: user.controller.ts:25 ~ error", error);
+    return res.status(400).send({
+      message: "Email already in use",
+    });
   }
 }
