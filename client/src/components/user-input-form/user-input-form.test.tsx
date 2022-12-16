@@ -25,8 +25,6 @@ test("it populates error messages", () => {
       handlePreviousStage={onClickCallback}
     />
   );
-  // const createButtonElement = screen.getByTestId("nav-button-right");
-  // fireEvent.click(createButtonElement);
 
   const errorMessages = screen.queryAllByTestId("error-message");
   // checks length of error messages to successfully populate error message to each field.
@@ -135,27 +133,4 @@ test("it checks input validation", async () => {
   );
 
   fireEvent.change(inputElement, { target: { value: "test item" } });
-
-  // expect(
-  //   (
-  //     screen.getByTestId(
-  //       "user-information-input-test-firstName"
-  //     ) as HTMLInputElement
-  //   ).value
-  // ).toBe("test item");
-
-  // const fields = screen.queryAllByTestId("user-information-input");
-  // const firstItem = fields[0];
-  // // eslint-disable-next-line testing-library/no-node-access
-  // const firstItemElement = firstItem.firstChild;
-
-  // expect(await firstItemElement!.textContent).toEqual("test item");
-  // const createButtonElement = screen.getByTestId("nav-button-right");
-  // fireEvent.click(createButtonElement);
-
-  // const errorMessages = screen.queryAllByTestId("error-message");
-
-  // expect(screen.getByDisplayValue("test item")).toBeInTheDocument();
-  // // checks length of error messages to successfully populate error message to each field
-  // expect(await errorMessages.length).toBe(10);
 });
