@@ -36,20 +36,6 @@ function Home() {
     e.preventDefault();
     // all the other important data is all checked at this point except for selected option. if data was modified on front end (for example, using react dev tool to change component state), we still check it on backend so we will still be able to catch such errors.
     if (selectedOption !== "") {
-      // const outputData = { selectedProduct, userInfo, selectedOption };
-      // try {
-      //   const data = await fetch(
-      //     `${process.env.REACT_APP_ENDPOINT}/api/users`,
-      //     {
-      //       mode: "cors",
-      //       method: "POST",
-      //       headers: {
-      //         "Content-Type": "application/json",
-      //       },
-      //       body: JSON.stringify({ outputData }),
-      //     }
-      //   );
-
       try {
         const data = await fetch(
           `${process.env.REACT_APP_ENDPOINT}/api/users`,

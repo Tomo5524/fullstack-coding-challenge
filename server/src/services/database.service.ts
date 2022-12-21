@@ -6,7 +6,7 @@ export const collections: { users?: mongoDB.Collection } = {};
 export async function connectToDatabase() {
   dotenv.config();
   const client: mongoDB.MongoClient = new mongoDB.MongoClient(
-    process.env.MONGODB_URL as string,
+    process.env.MONGODB_URL!,
     {
       useNewUrlParser: true,
       useUnifiedTopology: true,
@@ -16,7 +16,7 @@ export async function connectToDatabase() {
   await client.connect();
   const db: mongoDB.Db = client.db(process.env.DB_NAME);
   const usersCollection: mongoDB.Collection = db.collection(
-    process.env.COLLECTION_NAME as string
+    process.env.COLLECTION_NAME!
   );
   collections.users = usersCollection;
   // console.log(
