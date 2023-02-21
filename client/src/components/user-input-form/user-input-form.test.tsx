@@ -1,9 +1,9 @@
 import { fireEvent, render, screen } from "@testing-library/react";
-import userEvent from "@testing-library/user-event";
-import renderer from "react-test-renderer";
+// import userEvent from "@testing-library/user-event";
+// import renderer from "react-test-renderer";
 import UserInputForm from "./user-input-form";
 
-test("it populates error messages", () => {
+const renderComponent = () => {
   const onClickCallback = jest.fn();
   render(
     <UserInputForm
@@ -25,84 +25,69 @@ test("it populates error messages", () => {
       handlePreviousStage={onClickCallback}
     />
   );
+};
 
+test("it populates error messages", () => {
+  renderComponent();
   const errorMessages = screen.queryAllByTestId("error-message");
   // checks length of error messages to successfully populate error message to each field.
   expect(errorMessages.length).toBe(11);
 });
 
-test("it checks if fields exist", () => {
-  const onClickCallback = jest.fn();
-  render(
-    <UserInputForm
-      handleNextStage={onClickCallback}
-      userInfo={{
-        firstName: "",
-        lastName: "",
-        fnameKana: "",
-        lnameKana: "",
-        gender: "",
-        age: "",
-        vehicleType: "",
-        postCode: "",
-        city: "",
-        address: "",
-        emailAddress: "",
-      }}
-      setUserInfo={onClickCallback}
-      handlePreviousStage={onClickCallback}
-    />
-  );
-  const firstNameInput = screen.getByTestId(
-    "user-information-input-test-firstName"
-  );
-  expect(firstNameInput).toBeInTheDocument();
+describe("checks each field", () => {
+  test("check if inputs exist", () => {
+    renderComponent();
+    const firstNameInput = screen.getByTestId(
+      "user-information-input-test-firstName"
+    );
+    expect(firstNameInput).toBeInTheDocument();
 
-  const lastNameInput = screen.getByTestId(
-    "user-information-input-test-firstName"
-  );
-  expect(lastNameInput).toBeInTheDocument();
+    const lastNameInput = screen.getByTestId(
+      "user-information-input-test-lastName"
+    );
+    expect(lastNameInput).toBeInTheDocument();
 
-  const fnameKanaInput = screen.getByTestId(
-    "user-information-input-test-firstName"
-  );
-  expect(fnameKanaInput).toBeInTheDocument();
+    const fnameKanaInput = screen.getByTestId(
+      "user-information-input-test-fnameKana"
+    );
+    expect(fnameKanaInput).toBeInTheDocument();
 
-  const lnameKanaInput = screen.getByTestId(
-    "user-information-input-test-firstName"
-  );
-  expect(lnameKanaInput).toBeInTheDocument();
+    const lnameKanaInput = screen.getByTestId(
+      "user-information-input-test-lnameKana"
+    );
+    expect(lnameKanaInput).toBeInTheDocument();
 
-  const genderInput = screen.getByTestId(
-    "user-information-input-test-firstName"
-  );
-  expect(genderInput).toBeInTheDocument();
+    const genderInput = screen.getByTestId(
+      "user-information-input-test-gender"
+    );
+    expect(genderInput).toBeInTheDocument();
 
-  const ageInput = screen.getByTestId("user-information-input-test-firstName");
-  expect(ageInput).toBeInTheDocument();
+    const ageInput = screen.getByTestId("user-information-input-test-age");
+    expect(ageInput).toBeInTheDocument();
 
-  const vehicleTypeInput = screen.getByTestId(
-    "user-information-input-test-firstName"
-  );
-  expect(vehicleTypeInput).toBeInTheDocument();
+    const vehicleTypeInput = screen.getByTestId(
+      "user-information-input-test-vehicleType"
+    );
+    expect(vehicleTypeInput).toBeInTheDocument();
 
-  const postCodeInput = screen.getByTestId(
-    "user-information-input-test-firstName"
-  );
-  expect(postCodeInput).toBeInTheDocument();
+    const postCodeInput = screen.getByTestId(
+      "user-information-input-test-postCode"
+    );
+    expect(postCodeInput).toBeInTheDocument();
 
-  const cityInput = screen.getByTestId("user-information-input-test-firstName");
-  expect(cityInput).toBeInTheDocument();
+    const cityInput = screen.getByTestId("user-information-input-test-city");
+    expect(cityInput).toBeInTheDocument();
 
-  const addressInput = screen.getByTestId(
-    "user-information-input-test-firstName"
-  );
-  expect(addressInput).toBeInTheDocument();
+    const addressInput = screen.getByTestId(
+      "user-information-input-test-address"
+    );
+    expect(addressInput).toBeInTheDocument();
 
-  const emailAddressInput = screen.getByTestId(
-    "user-information-input-test-firstName"
-  );
-  expect(emailAddressInput).toBeInTheDocument();
+    const emailAddressInput = screen.getByTestId(
+      "user-information-input-test-emailAddress"
+    );
+    expect(emailAddressInput).toBeInTheDocument();
+  });
 });
 
 test("it checks input validation", async () => {
@@ -127,7 +112,6 @@ test("it checks input validation", async () => {
       handlePreviousStage={onClickCallback}
     />
   );
-
   const inputElement = screen.getByTestId(
     "user-information-input-test-firstName"
   );
