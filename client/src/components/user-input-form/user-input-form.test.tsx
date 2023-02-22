@@ -91,30 +91,35 @@ describe("checks each field", () => {
 });
 
 test("it checks input validation", async () => {
-  const onClickCallback = jest.fn();
-  render(
-    <UserInputForm
-      handleNextStage={onClickCallback}
-      userInfo={{
-        firstName: "",
-        lastName: "",
-        fnameKana: "",
-        lnameKana: "",
-        gender: "",
-        age: "",
-        vehicleType: "",
-        postCode: "",
-        city: "",
-        address: "",
-        emailAddress: "",
-      }}
-      setUserInfo={onClickCallback}
-      handlePreviousStage={onClickCallback}
-    />
-  );
+  renderComponent();
   const inputElement = screen.getByTestId(
     "user-information-input-test-firstName"
   );
 
   fireEvent.change(inputElement, { target: { value: "test item" } });
+});
+
+describe("checks error messages", () => {
+  test("check if error messages display", () => {
+    renderComponent();
+    fireEvent.click(screen.getByTestId("nav-button-right"));
+    const errorMessages = screen.getAllByTestId("error-message");
+    expect(errorMessages).toHaveLength(11);
+    errorMessages.forEach((msg) => {
+      expect(msg).toBeInTheDocument();
+      const errorMsg = msg.textContent || msg.innerText;
+      expect(errorMsg).toBe("※必須");
+    });
+  });
+  test("check if error messages have the correct value", () => {
+    renderComponent();
+    const inputKanaElement = screen.getByTestId(
+      "user-information-input-test-fnameKana"
+    );
+    fireEvent.change(inputKanaElement, { target: { value: "test item" } });
+    const errorMessage = screen.getByText("カタカナで入力してください");
+    expect(errorMessage.textContent || errorMessage.innerText).toBe(
+      "カタカナで入力してください"
+    );
+  });
 });
